@@ -29,10 +29,10 @@ You will create a Colab notebook that includes your code and results to document
 9. **Conclusions:** What insights/recommendations do you have? What did you find that was interesting? Which model was your best model, which models didn't work well? Why do you think this is? In general, I want a discussion of your experiment, the results, and what they mean.
 
 ### Your Experiments should Include:
-- A **k Nearest Neighbors** model with at least 1 tuned parameter
-- A **weighted k Nearest Neighbors** model with at least 1 tuned parameter
-- A **Decision Tree** model with at least 1 tuned parameter
-- A **Random Forest** model with at least 1 tuned parameter and feature importance chart
+- A **k Nearest Neighbors** model with a graph of at least 1 tuned parameter
+- A **weighted k Nearest Neighbors** model with a graph of at least 1 tuned parameter
+- A **Decision Tree** model with a graph of at least 1 tuned parameter
+- A **Random Forest** model with a graph of at least 1 tuned parameter and feature importance chart
 - **Normalize your data** and try the above models again (no need to tune your parameters this time unless you want to). 
 
 ## Notes, Tips and Tricks
