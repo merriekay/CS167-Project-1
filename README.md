@@ -1,39 +1,65 @@
 # CS 167 Project 1: 
-## Learning Objectives: 
-For this project, you will use the scikit-learn library to conduct a machine learning experiment, and your write-up will ask you to explain what you did and interpret the results. This directly addresses two of the course learning objectives stated in the syllabus:
-- Students will be able to create software which utilizes machine learning programming libraries in order to conduct machine-learning-based data analysis.
-- Students will be able to develop and conduct machine-learning-based data analysis experiments, and they will be able to interpret and explain the results.
 
-## Project Description:
-For this project, I'm giving you a choice of what dataset you would like to use. The options are:
-- [Ramen Ratings](https://www.kaggle.com/residentmario/ramen-ratings)
-- [Chocolate Ratings](https://www.kaggle.com/rtatman/chocolate-bar-ratings)
-- [World Happiness Data](https://www.kaggle.com/unsdsn/world-happiness)
-- [Heart Failure Prediction](https://www.kaggle.com/fedesoriano/heart-failure-prediction)
+## Project Description: Dataset Choice
 
-I've cleaned some of the data for you and uploaded the results to the Blackboard datasets folder. 
+For this project, you will get to choose what dataset you use. The ones we've used in class (other than Iris/Titanic as they're pretty small) are all fair game (pokemon, wine quality, breast cancer, spotify). I'd recommend choosing a dataset that is interesting to you--it will make the project more fun and engaging.
 
-I have provided a skeleton of what I want your project to look like, but the rest of the experiment is up to you. This project should read more like a lab report than a coding assignment. I want to be able to see what you are thinking and how you are going about solving the problem that you state using the data and the tools that you have learned in this class so far. There are some basic guidelines as to what I want to see laid out below, but you are the machine learning engineer and it is your job to draw some meaningful conclusions about the data. 
+Here are some other possibilities--Kaggle has many many more. It might be a good idea to double check with me before grabbing a dataset that's not listed here:
+- 🥑 [Avocado Prices](https://www.kaggle.com/datasets/neuromusic/avocado-prices)
+- 🎟️ [Admission to University](https://www.kaggle.com/datasets/akshaydattatraykhare/data-for-admission-in-the-university)
+- 🏎️ [Speed Dating](https://www.kaggle.com/datasets/whenamancodes/speed-dating)
+- 🎓 [World University Ranking](https://www.kaggle.com/datasets/whenamancodes/world-university-ranking-2022-2023)
+- 📸 [Top Instagram Influencers](https://www.kaggle.com/datasets/whenamancodes/top-200-influencers-crushing-on-instagram)
+- 🌦️ [Weather Prediction](https://www.kaggle.com/datasets/thedevastator/weather-prediction)
+- 🤑 [Student Monthly Expenses](https://www.kaggle.com/datasets/shariful07/nice-work-thanks-for-share)
+- 🍺 [Student Alcohol Consumption](https://www.kaggle.com/datasets/uciml/student-alcohol-consumption)
+- 🏫 [College Score Card](https://www.kaggle.com/datasets/thedevastator/u-s-department-of-education-college-scorecard-da)
+- 🎮 [IMDB Video Games](https://www.kaggle.com/datasets/muhammadadiltalay/imdb-video-games)
+- 🎵 [Spotify Recommendation](https://www.kaggle.com/datasets/bricevergnou/spotify-recommendation)
+
+# Project #1 Expectations: Written Portion
+You will submit a link to your GitHub repository which includes your code and results to document your experiment.
+And, most importantly, you will use markdown cells in the notebook to explain what you did, interpret the results, and draw conclusions.
+
+The written markdown portions must include the following things:
+1. __Name__: include your name at the top of the notebook
+2. __Data Description__: Answer the following questions:
+    - Explain what dataset you chose, and why you chose it. 
+    - Specify which columns you are using as your __predictor variables__
+    - What variable are you selecting as your __target variable__? 
+    - In selecting this target variable, does this make your problem a __classification__ or a __regression__? 
+3. __Research Question__: As clearly/specifcially as possible, state the question you are trying to solve in this project.
+    - For example, if I was working with the Iris dataset, I might ask 'how accurately can we predict the species of Iris from these 4 measurements?'
+4. __Data Preparation__: Explain what pre-processing steps you chose to do to get your dataset in shape for your experiments. (e.g. creation of dummy variables, filling in missing values, normalization, etc.) 
+5. __Metrics__: Identify which metrics you will be using to test your model and say why they are appropriate.
+6. __Baseline Performance__: Identify a baseline for your metrics--what woudld you expect to happen with this particular data if you always guessed the average or if you guessed randomly? Use `sklearn.dummy` to establish this baseline.
+7. __Model Planning and Execution__: Identify which learning algorithms you have tried and which important parameteres you've tuned for each one. 
+8. __Results__: After you conduct your learning experiment, summarize the results you got. Include visualizations (i.e. graphs) where appropriate. How did you find the best k, n, m, or other variables that you needed to tune?
+9. __Bumps in the road__: What challenges did you encounter? How did you overcome these challenges? Did you have to adapt your strategy to account for these challenges? Why or why not?
+10. __Conclusions__: What insights/recommendations do you have? What di dyou find that was interesting? Which model was your best model, which modles didn't work as well? Why do you think this is ? In general, I want a discussion of your experiment, the results, and what they mean. 
+
+# Project #1 Expectations: Code Portion
+
+For full credit, your experiments should include the following models:
+- __k Nearest Neighbors__
+- __weighted k Nearest Neighbors__
+- __decision tree__
+- __random forest__ 
+
+You need to demonstrate the performance of these models on both __normalized__ and __non-normalized__ data. 
+
+For each of the above models, you need to include a __graph of at least 1 tuned parameter__. 
+
+Essentailly, you will be able to fill out this chart with your results:
+
+| **Model**     | **Non-Normalized** | **Normalized** | **Parameter Tuned** |
+|---------------|--------------------|----------------|---------------------|
+| kNN           |                    |                |                     |
+| w-kNN         |                    |                |                     |
+| decision tree |                    |                |                     |
+| random forest |                    |                |                     |
 
 
-## Project Expectations: ☑️
-You will create a Colab notebook that includes your code and results to document your experiment. Most importantly, you will use text cells in the notebook to explain what you did, interpret the results, and make your recommendations. The written markdown protions must include the followint things:
-1. **Name**: Include your name at the top of the notebook. 
-2. **Problem**: Which dataset are you going to use? What questions are you going to ask about this dataset? Make sure that you can answer the question using ML models. What are your predictor variables and target variable?
-3. **Data Preparation**: Explain your data preparation. What did you have to do to get your data in shape for your experiments - creation of dummy variables, filling in missing values, etc. 
-4. **Metrics**: Identify which metrics you will be using to test your model, and say why they are appropriate. 
-5. **Baseline Performance**: Identify a baseline for your metrics - what would you expect to happen with this particular data if you always guessed the average or if you guessed randomly? What did some of the unsuccessful machine learning algorithms yield?
-6. **Model Planning and Execution**: Identify which learning algorithms you will try and which important parameters you will tune for each one. 
-7. **Results**: After you conduct your learning experiment, summarize the results you got. Include visualizations as appropriate. 
-8. **Bumps in the Road**: What challenges did you encounter? How did you overcome these challenges? Did you have to adapt your strategy to account for these challenges? Why or why not?
-9. **Conclusions:** What insights/recommendations do you have? What did you find that was interesting? Which model was your best model, which models didn't work well? Why do you think this is? In general, I want a discussion of your experiment, the results, and what they mean.
-
-### Your Experiments should Include:
-- A **k Nearest Neighbors** model with a graph of at least 1 tuned parameter
-- A **weighted k Nearest Neighbors** model with a graph of at least 1 tuned parameter
-- A **Decision Tree** model with a graph of at least 1 tuned parameter
-- A **Random Forest** model with a graph of at least 1 tuned parameter and feature importance chart
-- **Normalize your data** and try the above models again (no need to tune your parameters this time unless you want to). 
 
 ## Notes, Tips and Tricks
 
@@ -49,18 +75,19 @@ Use the template for building and testing a scikit-learn model. Start by doing t
 - Try to produce a plot like the one you did in Notebook 3, but use scikit-learn like in the example for random forests
 
 # Rubric and Grading
-| **Description/Writing**  |**Points Awarded** (1 point each)  |**Notes** |
+| **Description/Writing**  |**Points taken**  |**Notes** |
 | ------------------------------- | ------------------- | --------- |
 | 1: Name                         |        |    |
-| 2: Problem                      |        |    | 
-| 3: Data Prep                    |        |    |
-| 4: Metrics                      |        |    | 
-| 5: Baseline Performance         |        |    |
-| 6: Model Planning and Execution |        |    |
-| 7: Results                      |        |    |
-| 8: Bumps in the Road            |        |    | 
-| 9: Conclusions                  |        |    |
-| <b>Total                        |       /9 | </b>   |
+| 2: Data Description             |        |    | 
+| 3: Research Question            |        |    | 
+| 4: Data Preparation             |        |    |
+| 5: Metrics                      |        |    | 
+| 6: Baseline Performance         |        |    |
+| 7: Model Planning and Execution |        |    |
+| 8: Results                      |        |    |
+| 9: Bumps in the Road            |        |    | 
+| 10: Conclusions                  |        |    |
+| <b>Total                        |       /10 | </b>   |
 
 
 | **Code**  | **Points Awarded**  (1 point each) | **Notes** |
@@ -82,6 +109,6 @@ Use the template for building and testing a scikit-learn model. Start by doing t
 
 | **Written Portion**  | **Code Portion**   | **Total** |**Notes** |
 | --------- | ------------------- | --------- |--------- |
-|         /9  |                 /13    |        /22   |           |
+|         /10  |                 /13    |        /23   |           |
 
 
