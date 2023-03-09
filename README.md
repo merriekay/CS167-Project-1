@@ -1,6 +1,6 @@
 # CS 167 Project 1: 
 
-## Project Description: Dataset Choice
+## Project Description: 
 
 Choose your own Machine Learning Adventure
 
